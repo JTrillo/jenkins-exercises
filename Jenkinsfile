@@ -7,14 +7,14 @@ pipeline {
         echo "Compiling project"
         sh '''
           chmod +x gradlew
-          gradlew compileJava
+          ./gradlew compileJava
         '''
       }
     }
     stage('Unit Tests') {
       steps {
         echo "Running unit tests"
-        sh 'gradlew test'
+        sh './gradlew test'
       }
     }
   }
