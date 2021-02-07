@@ -1,2 +1,2 @@
-# jenkins-exercises
-Jenkins exercises for Bootcamp Devops Lemoncode
+# Jenkins Exercises
+Java + Gradle repository to learn Jenkins
