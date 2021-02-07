@@ -4,11 +4,16 @@ pipeline {
   stages {
     stage('Compile') {
       steps {
-        sh 'gradlew compileJava'
+        echo "Compiling project"
+        sh '''
+          chmod +x gradlew
+          gradlew compileJava
+        '''
       }
     }
     stage('Unit Tests') {
       steps {
+        echo "Running unit tests"
         sh 'gradlew test'
       }
     }
