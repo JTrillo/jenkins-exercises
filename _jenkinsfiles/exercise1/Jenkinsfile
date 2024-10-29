@@ -8,7 +8,7 @@ pipeline {
         sh 'java --version'
         sh 'chmod +x gradlew'
         echo "Gradle version:"
-        sh './gradlew version'
+        sh './gradlew --version'
       }
     }
     stage('Compile') {
