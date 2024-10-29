@@ -6,6 +6,7 @@ pipeline {
       steps {
         echo "Java version:"
         sh 'java --version'
+        chmod +x gradlew
         echo "Gradle version:"
         sh './gradlew version'
       }
@@ -13,10 +14,7 @@ pipeline {
     stage('Compile') {
       steps {
         echo "Compiling project"
-        sh '''
-          chmod +x gradlew
-          ./gradlew compileJava
-        '''
+        sh './gradlew compileJava'
       }
     }
     stage('Unit Tests') {
