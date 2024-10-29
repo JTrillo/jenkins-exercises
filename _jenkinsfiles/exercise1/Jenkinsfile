@@ -2,6 +2,14 @@ pipeline {
   agent any
 
   stages {
+    stage('Initial checks') {
+      steps {
+        echo "Java version:"
+        sh 'java --version'
+        echo "Gradle version:"
+        sh ' ./gradlew version'
+      }
+    }
     stage('Compile') {
       steps {
         echo "Compiling project"
